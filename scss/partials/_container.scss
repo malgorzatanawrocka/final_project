@@ -1,0 +1,281 @@
+.top_container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+
+    #big_text {
+        position: absolute;
+        top: 25%;
+        left: 35%;
+        width: 380px;
+        height: 280px;
+        font-size: 150%;
+        z-index: 30;
+
+        h1 {
+            font-weight: 700;
+        }
+    }
+
+    .eye {
+        position: absolute;
+        top: 40%;
+        left: 20%;
+        width: 226px;
+        height: 124px;
+        overflow: hidden;
+        background-image: url("/scss/images/sprite_eye.png");
+        background-size: cover;
+        animation: blinking_eye 4s steps(2) infinite;
+
+        @keyframes blinking_eye {
+            95% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: -452px 0;
+            }
+        }
+    }
+}
+
+
+.scroll {
+
+    position: absolute;
+    position: fixed;
+    left: 95%;
+    top: 40%;
+    transform: rotate(90deg);
+}
+
+.scroll::after {
+    display: block;
+    content: "";
+    width: 20px;
+    height: 1.5px;
+    background-color: #140F83;
+    position: absolute;
+    left: 140%;
+    top: 50%;
+    transform: translate(-50%)
+}
+
+
+.coral_circle {
+
+    height: 160px;
+    width: 80px;
+    border-radius: 160px 0 0 160px;
+    background-color: #EB7676;
+    left: calc(100% - 80px);
+    top: 54%;
+    position: absolute;
+    animation: slide_down 30s linear alternate infinite;
+}
+
+@keyframes slide_down {
+    0% {
+        top: -250px
+    }
+
+    100% {
+        top: 1930px;
+    }
+
+}
+
+
+.boxes {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    top: -7%;
+
+    .blue_box {
+        position: absolute;
+        height: 320px;
+        width: 700px;
+        background-color: #140F83;
+        z-index: 0
+    }
+
+    .coral_box {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        top: 30%;
+        left: 50%;
+        background-color: #EB7676;
+        box-shadow: 20px 25px 40px 20px rgba(20, 15, 131, 0.2);
+        z-index: 1;
+
+    }
+}
+
+
+.path_shadow_container {
+    height: 1px;
+    width: 100%;
+    position: relative;
+    z-index: 900;
+
+    .path_shadow {
+        transform: translate(688px, -300px);
+        width: 336px;
+        height: 680px;
+        background-image: url("/scss/images/path_shadow.png");
+        background-size: cover;
+        overflow: hidden;
+        z-index: 20;
+    }
+}
+
+.text_container {
+
+    width: 100%;
+    height: 260px;
+    padding-left: 40px;
+    padding-top: 50px;
+
+    .text_projects {
+
+        width: 500px;
+        text-align: right;
+        padding-left: 40px;
+        padding-right: 30px;
+
+        h2 {
+            font-weight: 700;
+            font-size: 20px;
+            padding-bottom: 10px;
+        }
+
+        p {
+
+            font-weight: 300;
+            line-height: 1.5rem;
+            font-size: 14px;
+            margin-bottom: 80px;
+        }
+    }
+}
+
+.borders {
+    position: absolute;
+    height: 600px;
+
+    .border_coral {
+        position: relative;
+        transform: translate(-75%, -75%);
+        height: 300px;
+        width: 300px;
+        border: 3px solid #EB7676;
+        top: 50%;
+        left: 50%;
+        z-index: -200
+    }
+
+    .border_coral2 {
+        position: relative;
+        transform: translate(-25%, -125%);
+        height: 300px;
+        width: 300px;
+        border: 3px solid #EB7676;
+        top: 50%;
+        left: 50%;
+        z-index: -300;
+    }
+}
+
+
+.foto_container {
+    position: relative;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+
+    .foto_1,
+    .foto_2,
+    .foto_3 {
+        height: 300px;
+        width: 300px;
+        overflow: hidden;
+    }
+
+    .foto_1 {
+        align-self: flex-start;
+    }
+
+    .foto_2 {
+        align-self: flex-end;
+    }
+}
+
+
+.see_more_container {
+    display: flex;
+    height: 300px;
+    width: 100%;
+    justify-content: flex-end;
+
+    .foto_3 {
+        height: 300px;
+        width: 300px;
+        overflow: hidden;
+        background-image: url("/scss/images/kubek@2x.jpg");
+        background-size: cover;
+    }
+
+    .see_more {
+        display: flex;
+        height: 300px;
+        width: 300px;
+        background-color: #EB7676;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
+
+
+        p {
+            padding-right: 10px;
+            width: 100px;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 0.7em;
+            text-align: right;
+            margin-right: 10px
+        }
+
+        p:last-child {
+            padding-bottom: 20px;
+        }
+
+    }
+
+    .blue_rec {
+        height: 300px;
+        width: 212px;
+        background-color: #140F83;
+        align-self: flex-end;
+
+    }
+
+}
+
+.go_to {
+    position: relative
+}
+
+.go_to p {
+    padding: 70px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+}
+footer {
+    height: 100px;
+    width: 100%;
+    background-color: #140F83;
+}

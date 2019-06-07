@@ -1,0 +1,32 @@
+.navbar {
+    margin-top: 20px;
+    height: 50px;
+    width: 100%;
+    list-style-type: none;
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    z-index: 1000;
+
+}
+
+li {
+    margin-left: 45px;
+    justify-content: flex-end;
+    transition: 0.3s;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+li:first-child {
+    margin-right: 50px
+}
+
+
+.blurb {
+    transform: translate(-140px, -270px);
+    z-index: 1;
+    position: absolute;
+}
